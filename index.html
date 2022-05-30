@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="heading">
+          <h1>todo</h1>
+          <img
+            src="/images/icon-sun.svg"
+            alt=""
+            class="mode"
+            data-mode="moon"
+          />
+        </div>
+      </header>
+      <main>
+        <div class="todo">
+          <form action="" class="create-div">
+            <input
+              type="text"
+              placeholder="Create a new todo..."
+              class="create"
+            />
+            <span class="inputcircle circle">
+              <img src="/images/icon-check.svg" alt="" />
+            </span>
+          </form>
+          <div class="todoListContainer">
+            <ul class="todoContainer">
+              <li class="todoList" data-status="pending">
+                <div class="todoItem" draggable="true">
+                  <span class="circle">
+                    <img src="/images/icon-check.svg" alt="" />
+                  </span>
+                  <p class="todoInfo">Complete online Javascript course</p>
+                </div>
+                <img src="/images/icon-cross.svg" alt="" class="cross" />
+              </li>
+              <li class="todoList" data-status="pending">
+                <div class="todoItem" draggable="true">
+                  <span class="circle">
+                    <img src="/images/icon-check.svg" alt="" />
+                  </span>
+                  <p class="todoInfo">Jog around the park 3x</p>
+                </div>
+                <img src="/images/icon-cross.svg" alt="" class="cross" />
+              </li>
+              <li class="todoList" data-status="pending">
+                <div class="todoItem" draggable="true">
+                  <span class="circle">
+                    <img src="/images/icon-check.svg" alt="" />
+                  </span>
+                  <p class="todoInfo">10 minutes meditation</p>
+                </div>
+                <img src="/images/icon-cross.svg" alt="" class="cross" />
+              </li>
+              <li class="todoList" data-status="pending">
+                <div class="todoItem" draggable="true">
+                  <span class="circle">
+                    <img src="/images/icon-check.svg" alt="" />
+                  </span>
+                  <p class="todoInfo">Read for 1 hour</p>
+                </div>
+                <img src="/images/icon-cross.svg" alt="" class="cross" />
+              </li>
+              <li class="todoList" data-status="pending">
+                <div class="todoItem" draggable="true">
+                  <span class="circle">
+                    <img src="/images/icon-check.svg" alt="" />
+                  </span>
+                  <p class="todoInfo">Pick up groceries</p>
+                </div>
+                <img src="/images/icon-cross.svg" alt="" class="cross" />
+              </li>
+              <li class="todoList" data-status="pending">
+                <div class="todoItem" draggable="true">
+                  <span class="circle">
+                    <img src="/images/icon-check.svg" alt="" />
+                  </span>
+                  <p class="todoInfo">Complete Todo App on Frontend Mentor</p>
+                </div>
+                <img src="/images/icon-cross.svg" alt="" class="cross" />
+              </li>
+            </ul>
+            <div class="functions">
+              <p><span class="length">6</span> items left</p>
+              <div class="state">
+                <p class="allItems">All</p>
+                <p class="pending">Active</p>
+                <p class="completed">Completed</p>
+              </div>
+              <p class="clear">Clear Completed</p>
+            </div>
+          </div>
+
+          <p class="reorderpara">Drag and drop to reorder list</p>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

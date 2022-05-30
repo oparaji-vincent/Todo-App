@@ -1,0 +1,369 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  header {
+    background-image: url(/images/bg-desktop-light.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+  }
+  
+  /* css for header lightmode  */
+  header.light {
+    background-image: url(/images/bg-desktop-light.jpg);
+  }
+  
+  /* Css for the heading  */
+  
+  .heading {
+    width: 40%;
+    padding: 5% 30% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: hsl(0, 0%, 98%);
+    transition: all 0.5s ease;
+  }
+  
+  main {
+    width: 100%;
+    height: 60%;
+    background-color: hsl(235, 21%, 11%);
+    transition: all 0.5s ease;
+  }
+  
+  /* css for main lightmode  */
+  main.light {
+    background-color: hsl(0, 0%, 98%);
+  }
+  
+  /* css for the todo app  */
+  
+  .todo {
+    position: fixed;
+    width: 40%;
+    height: 65%;
+    top: 22%;
+    left: 30%;
+    transform: translate(-30% -15%);
+    font-size: 18px;
+  }
+  
+  /* css for the input section of the app  */
+  
+  /* csss for the div that contains the input  */
+  .create-div {
+    width: 100%;
+    height: 13%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  /* css for the input  */
+  .create {
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: hsl(235, 24%, 19%);
+    box-shadow: hsl(235, 21%, 11%) 0px 5px 30px;
+    font-family: "Josefin Sans", sans-serif;
+    padding-left: 10%;
+    border-radius: 5px;
+    color: hsl(234, 39%, 85%);
+    caret-color: hsl(220, 98%, 61%);
+    font-size: 18px;
+  }
+  
+  /* css for input lightmode  */
+  .create.light {
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: none;
+  }
+  
+  /* css for the input placeholder  */
+  .create::placeholder {
+    font-size: 18px;
+    color: hsl(234, 39%, 85%);
+  }
+  
+  /* css for the circles  */
+  .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid hsl(234, 11%, 52%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+  }
+  
+  .circle.light {
+    border-color: hsl(236, 33%, 92%);
+  }
+  
+  /* css for the input circle only  */
+  .inputcircle {
+    position: absolute;
+    top: 25%;
+    left: 3%;
+  }
+  
+  /* css for the circle when it is clicked  */
+  .circle.completed {
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+  
+  /* css for  the circled whwn it is hovered  */
+  .circle.hover {
+    border: 1px solid hsl(220, 98%, 61%);
+  }
+  
+  /* css for the original state of the circle image - to hide the image  */
+  .circle img {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  /* css to show the circle image on hover  */
+  .circle img.show {
+    opacity: 1;
+  }
+  
+  /* css for the todolist  */
+  
+  /* css for the todo list container  */
+  .todoListContainer {
+    width: 100%;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    box-shadow: rgb(0, 0, 0) 0px 5px 100px;
+    transition: all 0.5s ease;
+  }
+  
+  /* css for .todoListContainer lightmode  */
+  .todoListContainer.light {
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: rgb(206, 197, 197) 5px 5px 30px;
+  }
+  
+  .todoContainer {
+    max-height: 300px;
+  }
+  
+  /* css to add overflow  */
+  .todoContainer.overflow {
+    overflow-y: scroll;
+  }
+  
+  /* css for the individual list item  */
+  .todoList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+    color: hsl(234, 39%, 85%);
+    list-style: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    padding: 2% 3%;
+  }
+  
+  /* css for todoList light  */
+  .todoList.light {
+    color: hsl(235, 19%, 35%);
+    border-color: hsl(233, 11%, 84%);
+  }
+  
+  .todoList.over {
+    background-color: black;
+  }
+  
+  .todoList.hide {
+    display: none;
+  }
+  
+  /* css to hide the image (cross) - initial state  */
+  .cross {
+    opacity: 0;
+    transition: all 0.5s ease;
+    pointer-events: none;
+  }
+  
+  /* css to show the image (cross) on hover  */
+  .cross.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  /* css to position the content in the .todoItem */
+  .todoItem {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  
+  /* css to style the todoInfo when completed  */
+  .todoInfo.completed {
+    color: hsl(233, 14%, 35%);
+    text-decoration: line-through;
+  }
+  
+  .todoInfo.completed.light {
+    color: hsl(233, 11%, 84%);
+  }
+  
+  /* css for the todoitem span  */
+  .todoItem span {
+    margin-right: 30px;
+  }
+  
+  /* css for the .functions section  */
+  .functions {
+    display: flex;
+    padding: 2.5% 3%;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(233, 14%, 35%);
+  }
+  
+  .functions.light {
+    color: hsl(236, 9%, 61%);
+  }
+  
+  /* css to style the state div properly  */
+  .state {
+    display: flex;
+    transition: all 0.5s ease;
+  }
+  
+  .state.light {
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: rgb(206, 197, 197) 5px 5px 30px;
+  }
+  
+  .state p {
+    margin: 0 10px;
+  }
+  
+  .functions p {
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  /* css for the functions p on hover  */
+  .functions p.hover {
+    color: hsl(234, 39%, 85%);
+  }
+  
+  .functions p.hover.light {
+    color: hsl(235, 19%, 35%);
+  }
+  
+  /* css for the functions p when active  */
+  .functions p.active {
+    color: hsl(220, 98%, 61%);
+  }
+  
+  /* css for the render para  */
+  .reorderpara {
+    text-align: center;
+    margin-top: 30px;
+    color: hsl(233, 14%, 35%);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    header {
+      background-image: url(./images/bg-mobile-light.jpg)
+    }
+  
+    header.light {
+      background-image: url(./images/bg-mobile-light.jpg);
+    }
+  
+    .heading {
+      width: 90%;
+      padding: 10% 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .todo {
+      width: 90%;
+      top: 22%;
+      left: 5%;
+      transform: translate(-5% -22%);
+      font-size: 12px;
+    }
+  
+    .create {
+      width: 85%;
+      height: 80%;
+      padding-left: 15%;
+    }
+  
+    .circle {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .inputcircle {
+      position: absolute;
+      top: 20%;
+      left: 3%;
+    }
+  
+    .create::placeholder {
+      font-size: 12px;
+      color: hsl(234, 39%, 85%);
+    }
+  
+    .todoItem span {
+      margin-right: 20px;
+    }
+  
+    .functions {
+      display: flex;
+      padding: 4% 3%;
+      justify-content: space-between;
+      align-items: center;
+      color: hsl(233, 14%, 35%);
+    }
+  
+    .state {
+      position: absolute;
+      width: 92%;
+      left: 0;
+      bottom: 0%;
+      color: hsl(233, 14%, 35%);
+      padding: 4% 3%;
+      background-color: hsl(235, 24%, 19%);
+      justify-content: center;
+      border-radius: 5px;
+    }
+  
+    .reorderpara {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5%;
+    }
+  }
+  
